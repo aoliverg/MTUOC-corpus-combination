@@ -6,7 +6,7 @@ corpusSELECTED: corpusSELECTED-eng-spa.txt
 corpus_GEN_SEL_LINES: 10000000
 corpus_GEN_MAX_READ: -1
 from_scores_database: False
-scores_database_name: CCMatrix-Sherlock-Holmes-eng-spa.sqlite
+scores_database_name: corpus-scores-eng-spa.sqlite
 valsize: 5000
 evalsize: 5000
 SLcode3: eng
