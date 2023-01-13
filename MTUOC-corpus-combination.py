@@ -1,5 +1,5 @@
 #    MTUOC-NMT-corpus-combination
-#    Copyright (C) 2022  Antoni Oliver
+#    Copyright (C) 2023 Antoni Oliver
 #
 #    This program is free software: you can redistribute it and/or modify
 #    it under the terms of the GNU General Public License as published by
@@ -17,6 +17,7 @@
 import sys
 import os
 import importlib
+import importlib.util
 import codecs
 import kenlm
 import sqlite3
