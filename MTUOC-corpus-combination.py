@@ -58,7 +58,9 @@ from MTUOC_train_val_eval import split_corpus
 
 
 corpusSPE=config["corpusSPE"]
+weightSPE=config["weightSPE"]
 corpus_GEN=config["corpusGEN"]
+weightGEN=config["weightGEN"]
 corpusSELECTED=config["corpusSELECTED"]
 corpus_GEN_SEL_LINES=int(config["corpus_GEN_SEL_LINES"])
 corpus_GEN_MAX_READ=int(config["corpus_GEN_MAX_READ"])
@@ -257,7 +259,7 @@ for linia in entrada:
     linia=linia.rstrip()
     camps=linia.split("\t")
     if len(camps)>=2:
-        cadena=camps[0]+"\t"+camps[1]
+        cadena=camps[0]+"\t"+camps[1]+"\t"+str(weightSPE)
         sortida.write(cadena+"\n")
         contparallel+=1
 
@@ -290,13 +292,13 @@ sortidaEval=codecs.open(evalCorpus,"a",encoding="utf-8")
 for linia in entrada:
     linia=linia.rstrip()
     if lenval<valsize:
-        sortidaVal.write(linia+"\n")
+        sortidaVal.write(linia+"\t"+str(weightGEN)+"\n")
         lenval+=1
     elif leneval<evalsize:
-        sortidaEval.write(linia+"\n")
+        sortidaEval.write(linia+"\t"+str(weightGEN)+"\n")
         leneval+=1
     else:
-        sortidaTrain.write(linia+"\n")
+        sortidaTrain.write(linia+"\t"+str(weightGEN)+"\n")
 
 sortidaTrain.close()
 sortidaVal.close()

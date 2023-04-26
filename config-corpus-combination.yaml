@@ -1,22 +1,24 @@
 MTUOC: /MTUOC
 
-corpusSPE: corpusSPE-eng-spa.txt
-corpusGEN: corpusGEN-eng-spa.txt.gz
-corpusSELECTED: corpusSELECTED-eng-spa.txt
-corpus_GEN_SEL_LINES: 10000000
+corpusSPE: Tolstoi-aligned-075-rus-eng.txt
+weightSPE: 1
+corpusGEN: corpusSPEprova.txt
+weightGEN: 0.5
+corpusSELECTED: corpusSELECTED30M-rus-eng.txt
+corpus_GEN_SEL_LINES: 100000
 corpus_GEN_MAX_READ: -1
 from_scores_database: False
-scores_database_name: corpus-scores-eng-spa.sqlite
+scores_database_name: corpus-scores-rus-eng.sqlite
 valsize: 5000
 evalsize: 5000
-SLcode3: eng
-SLcode2: en
-TLcode3: spa
-TLcode2: es
+SLcode3: rus
+SLcode2: ru
+TLcode3: eng
+TLcode2: en
 
 tokenize_for_language_model_creation: True
-SL_TOKENIZER: MTUOC_tokenizer_eng
-TL_TOKENIZER: MTUOC_tokenizer_spa
+SL_TOKENIZER: MTUOC_tokenizer_rus
+TL_TOKENIZER: MTUOC_tokenizer_eng
 
 VERBOSE: True
 LOG_FILE: combination_log.txt
